@@ -1,18 +1,36 @@
+<div align="center">
+
 # Sahil Naik Portfolio
 
-A personal portfolio website for presenting my work as a backend-focused software developer, with emphasis on scalable APIs, dependable systems, and production-ready engineering.
+Personal portfolio website showcasing my work as a backend-focused software developer with emphasis on scalable APIs, reliable systems, and production-ready engineering.
+
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06b6d4?logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0f172a)
+
+</div>
 
 ## Overview
 
-This repository contains my portfolio website built to highlight:
+This repository contains my personal portfolio application, built to present:
 
 - professional experience
 - technical skills
 - selected projects
-- education
+- educational background
 - contact information
 
-The project combines a modern frontend presentation with concise, recruiter-friendly content to reflect both technical capability and professional positioning.
+The site is designed to balance strong visual presentation with clear, recruiter-friendly content, reflecting both technical execution and professional positioning.
+
+## Highlights
+
+- Responsive single-page portfolio built with the Next.js App Router
+- Motion-driven UI with interactive hero and polished section transitions
+- Structured presentation of experience, projects, skills, and education
+- Resume download support and contact access
+- Clean, modern interface aligned with a professional developer brand
 
 ## Tech Stack
 
@@ -24,13 +42,15 @@ The project combines a modern frontend presentation with concise, recruiter-frie
 - React Three Fiber
 - Lucide React
 
-## Highlights
+## Project Structure
 
-- Responsive single-page portfolio experience
-- Animated hero and motion-driven UI details
-- Dedicated sections for experience, skills, projects, and education
-- Smooth in-page navigation and interactive components
-- Resume download support
+```text
+app/          Next.js App Router entry points and application shell
+components/   Reusable UI sections and interactive components
+lib/          Portfolio content and utility helpers
+public/       Static assets and downloadable resume
+types/        Shared TypeScript definitions
+```
 
 ## Local Development
 
@@ -55,7 +75,7 @@ npm run dev
 
 The application will be available at `http://localhost:3000`.
 
-## Scripts
+## Available Scripts
 
 ```bash
 npm run dev
@@ -65,21 +85,11 @@ npm run lint
 npm run typecheck
 ```
 
-## Project Structure
-
-```text
-app/          Next.js App Router entry points and global setup
-components/   Reusable UI sections and interactive elements
-lib/          Portfolio content and helper utilities
-public/       Static assets and downloadable resume
-types/        Shared TypeScript definitions
-```
-
 ## Contact
 
-- GitHub: https://github.com/sahilsnaik
-- LinkedIn: https://www.linkedin.com/in/sahil-naik-003658125/
-- Email: sn220222@gmail.com
+- GitHub: [sahilsnaik](https://github.com/sahilsnaik)
+- LinkedIn: [Sahil Naik](https://www.linkedin.com/in/sahil-naik-003658125/)
+- Email: [sn220222@gmail.com](mailto:sn220222@gmail.com)
 
 ## License
 
