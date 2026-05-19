@@ -1,0 +1,28 @@
+Sahil Shankar Naik
+Software Developer (Backend)
+
+Email: sn220222@gmail.com
+Phone: +91 9022377468
+GitHub: https://github.com/sahilsnaik
+LinkedIn: https://www.linkedin.com/in/sahil-naik-003658125/
+
+Summary
+Backend-focused developer designing resilient APIs, scalable systems, and delivery-ready products with clean architecture and strong execution discipline.
+
+Experience
+Software Developer (Backend) | Wholewave Elements Pvt Ltd | Chennai | June 2025 - Present
+- Building backend systems with a focus on scalable APIs, maintainable architecture, and dependable delivery.
+- Working across payment integrations, operational workflows, and data handling with performance and reliability in mind.
+- Collaborating closely with product and engineering teams to ship stable features that support real business use.
+
+Independent Project Developer | Freelance and Self-Directed Work | Remote | 2023 - 2025
+- Designed and shipped portfolio-grade product builds across MERN, Laravel, and IoT use cases.
+- Handled end-to-end implementation choices including authentication, data models, and frontend integration.
+- Strengthened production habits through self-directed product delivery and debugging work.
+
+Education
+MCA | R.V. College of Engineering, Bengaluru | CGPA 7.91 (2022-2024)
+BSc IT | Vidyalankar School of IT, Mumbai | CGPA 8.72 (2019-2022)
+
+Skills
+JavaScript, Python, PHP, SQL, NoSQL, Laravel, React.js, Node.js, Express.js, Tailwind CSS, MySQL, MongoDB, Docker, Postman, CI/CD
