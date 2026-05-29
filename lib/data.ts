@@ -18,7 +18,7 @@ export const personalInfo: PersonalInfo = {
   linkedin: "/sahil-naik-003658125/",
   intro:
     "Backend-focused developer designing resilient APIs, scalable systems, and delivery-ready products with clean architecture and strong execution discipline.",
-  resumeUrl: "/Sahil-Shankar-Naik-Resume.txt",
+  resumeUrl: "/Sahil-Shankar-Naik-Resume.pdf",
 };
 
 export const navItems: NavItem[] = [

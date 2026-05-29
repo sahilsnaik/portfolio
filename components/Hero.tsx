@@ -5,7 +5,7 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import { ArrowDown, Github, Linkedin, Mail, Radar, ShieldCheck, Sparkles, Workflow } from "lucide-react";
 import { useEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
-import { keyStats, personalInfo } from "@/lib/data";
+import { experience, keyStats, personalInfo } from "@/lib/data";
 import { scrollToSection } from "@/lib/scroll";
 
 const ParticleBackground = dynamic(() => import("@/components/ParticleBackground"), {
@@ -99,6 +99,7 @@ export function Hero() {
 
   const typedName = personalInfo.name.slice(0, nameCount);
   const typedRole = personalInfo.role.slice(0, roleCount);
+  const currentExperience = experience[0];
 
   const handleCardMove = (event: ReactMouseEvent<HTMLDivElement>) => {
     if (!canAnimate) return;
@@ -125,7 +126,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 grid-overlay opacity-60" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(6,182,212,0.14),transparent_28%)]" />
       <motion.div
-        className="absolute inset-0 hidden lg:block"
+        className="absolute inset-0 opacity-55 lg:opacity-100"
         style={canAnimate ? { opacity: backgroundOpacity } : undefined}
       >
         <ParticleBackground />
@@ -133,9 +134,6 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(circle_at_28%_42%,rgba(4,7,13,0.14),rgba(4,7,13,0.54)_34%,rgba(4,7,13,0.84)_58%,rgba(4,7,13,0.94)_82%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-44 bg-gradient-to-t from-background via-background/92 to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-24 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.12),transparent_68%)] blur-2xl" />
-      <div className="absolute inset-0 opacity-55 lg:hidden">
-        <ParticleBackground />
-      </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-20 z-[1] h-32 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.16),transparent_72%)] blur-2xl lg:hidden" />
 
       <div className="section-shell flex min-h-[92vh] items-center pb-20 pt-28 lg:min-h-screen lg:pb-28">
@@ -280,25 +278,28 @@ export function Hero() {
             <div className="relative">
               <p className="section-kicker">Currently</p>
               <h2 className="mt-4 font-display text-3xl tracking-[-0.05em] text-white sm:text-[2.35rem]">
-                Wholewave Elements Pvt Ltd
+                {currentExperience.company}
               </h2>
-              <p className="mt-3 text-lg font-semibold text-white/95">Software Developer (Backend)</p>
+              <p className="mt-3 text-lg font-semibold text-white/95">{currentExperience.role}</p>
               <p className="mt-2 text-sm uppercase tracking-[0.3em] text-slate-300">
-                Chennai • June 2025 to Present
+                {currentExperience.location} • {currentExperience.period}
               </p>
               <p className="mt-5 max-w-sm text-sm leading-7 text-slate-100">
-                Focused on APIs, payments, and reliability for products that need stable
-                backend execution.
+                {currentExperience.highlights[1]}
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-3xl border border-white/14 bg-white/[0.085] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
                   <p className="text-sm text-slate-300">Core Focus</p>
-                  <p className="mt-3 text-xl font-semibold text-white">Backend Systems</p>
+                  <p className="mt-3 text-xl font-semibold text-white">
+                    {currentExperience.currentFocus?.[0] ?? "Backend Systems"}
+                  </p>
                 </div>
                 <div className="rounded-3xl border border-white/14 bg-white/[0.085] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
                   <p className="text-sm text-slate-300">Primary Strength</p>
-                  <p className="mt-3 text-xl font-semibold text-white">Reliable APIs</p>
+                  <p className="mt-3 text-xl font-semibold text-white">
+                    {currentExperience.currentFocus?.[1] ?? "Reliable APIs"}
+                  </p>
                 </div>
               </div>
 

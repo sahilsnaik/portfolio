@@ -30,7 +30,7 @@ export type ProjectItem = {
   title: string;
   summary: string;
   stack: string[];
-  codeUrl: string;
+  codeUrl?: string;
   problem: string;
   solution: string;
   role: string;

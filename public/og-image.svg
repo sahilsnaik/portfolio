@@ -1,0 +1,24 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#050B14"/>
+  <circle cx="960" cy="80" r="360" fill="url(#cyanGlow)" opacity="0.7"/>
+  <circle cx="170" cy="520" r="260" fill="url(#blueGlow)" opacity="0.45"/>
+  <rect x="72" y="72" width="1056" height="486" rx="44" fill="#08111D" fill-opacity="0.84" stroke="#1E7180" stroke-opacity="0.45" stroke-width="2"/>
+  <text x="112" y="152" fill="#67E8F9" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="8">PORTFOLIO</text>
+  <text x="112" y="272" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="76" font-weight="700">Sahil Shankar Naik</text>
+  <text x="116" y="342" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="38" font-weight="500">Software Developer (Backend)</text>
+  <text x="116" y="420" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="30">Laravel • Node.js • REST APIs • Payments • MySQL</text>
+  <rect x="116" y="468" width="230" height="54" rx="27" fill="#22D3EE" fill-opacity="0.12" stroke="#67E8F9" stroke-opacity="0.5"/>
+  <text x="148" y="504" fill="#A5F3FC" font-family="Arial, sans-serif" font-size="22" font-weight="700">Reliable APIs</text>
+  <rect x="372" y="468" width="260" height="54" rx="27" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.16"/>
+  <text x="404" y="504" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="22" font-weight="700">Payment Systems</text>
+  <defs>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 80) rotate(90) scale(360)">
+      <stop stop-color="#22D3EE" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blueGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(170 520) rotate(90) scale(260)">
+      <stop stop-color="#38BDF8" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
