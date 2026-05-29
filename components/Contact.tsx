@@ -51,9 +51,6 @@ export function Contact() {
                 >
                   LinkedIn
                 </MagneticButton>
-                <MagneticButton href={personalInfo.resumeUrl} download variant="secondary">
-                  Resume
-                </MagneticButton>
               </div>
               <div className="mt-10 rounded-[1.75rem] border border-accent/15 bg-accent/[0.06] p-5">
                 <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Best Fit</p>

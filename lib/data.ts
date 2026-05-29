@@ -56,7 +56,7 @@ export const socialLinks: SocialLink[] = [
 
 export const aboutCopy = [
   "I build backend systems that stay dependable under real usage, from payment workflows and authentication layers to data-heavy product features.",
-  "My work centers on Laravel, Node.js, SQL and NoSQL systems, and the practical engineering choices that keep products fast, maintainable, and shippable.",
+  "My work centers on Laravel, Node.js, SQL systems, and the practical engineering choices that keep products fast, maintainable, and shippable.",
   "I enjoy taking ownership of messy product edges, the places where integrations, data design, and release quality matter more than hype.",
 ];
 
@@ -73,13 +73,13 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: "Tools",
-    items: ["Git", "GitHub", "Docker", "Postman", "CI/CD"],
+    items: ["Git", "GitHub", "Docker", "Postman", "CI/CD", "AWS S3", "Jira", "Bitbucket"],
     primaryItems: ["Docker", "CI/CD"],
   },
   {
     title: "Databases",
     items: ["MySQL", "MongoDB", "PostgreSQL"],
-    primaryItems: ["PostgreSQL", "MySQL"],
+    primaryItems: ["MySQL"],
   },
 ];
 
@@ -100,7 +100,7 @@ export const experience: ExperienceItem[] = [
       "Query performance, caching, and operational reliability",
       "Release-ready backend changes inside Agile delivery cycles",
     ],
-    dailyStack: ["Laravel", "PHP", "MySQL", "JWT", "AWS S3", "Bitbucket", "Postman"],
+    dailyStack: ["Laravel", "JavaScript", "MySQL", "JWT", "AWS S3", "Bitbucket", "Postman", "Jira"],
   },
 ];
 
@@ -113,22 +113,21 @@ export const keyStats: KeyStat[] = [
 
 export const projects: ProjectItem[] = [
   {
-    title: "WEGOFIN",
+    title: "WegoFin",
     summary:
-      "Custom payment integration system with RESTful APIs, real-time tracking, refunds and settlements, and support for multiple payment methods.",
-    stack: ["Laravel", "REST APIs", "Payments", "Tracking", "Refunds"],
-    codeUrl: `https://github.com${personalInfo.github}`,
+      "Custom fintech platform with admin and merchant workflows for secure payments, payment links, QR codes, refunds, payouts, settlements, reports, and real-time transaction tracking.",
+    stack: ["Laravel 8", "PHP", "MySQL", "REST APIs", "Backpack Admin"],
     problem:
-      "The platform needed a secure way to manage payment workflows, refunds, settlements, and multiple payment methods without creating operational bottlenecks.",
+      "The platform needed both merchant-facing payment tools and admin-facing operations controls to manage online payments, refunds, payouts, settlements, KYC, reports, tickets, roles, and transaction visibility securely.",
     solution:
-      "Built a custom backend integration layer with reliable REST APIs, transaction tracking, and settlement-aware flows that kept payment operations traceable and stable.",
-    role: "Designed and delivered backend APIs, payment workflow logic, and operational tracking behavior.",
+      "Designed and implemented Laravel REST APIs, gateway callback/status flows, API credential checks, scheduled jobs, and Backpack admin modules for merchants, dashboards, KYC, transactions, refunds, payouts, reports, tickets, roles, and settlements.",
+    role: "Built backend payment APIs, refund and settlement workflow logic, real-time tracking behavior, and performance-focused improvements in collaboration with cross-functional teams.",
     outcome:
-      "Created a dependable payment backbone that improved transaction visibility and supported cleaner refund and settlement handling.",
+      "Delivered a more dependable financial operations system with clearer visibility for merchants and admins, stronger data security, scalable API integrations, and cleaner handling of payments, refunds, payouts, reports, and settlements.",
     highlights: [
-      "Multi-method payment integration",
-      "Refund and settlement workflow support",
-      "Real-time transaction tracking",
+      "Admin dashboards, roles, KYC, tickets, and reports",
+      "Merchant payment links, QR codes, and API flows",
+      "Refund, payout, settlement, and status tracking",
     ],
     visualLabel: "Payments Infrastructure",
     demoNote: "Demo available on request due to private company workflows and credentials.",
@@ -136,30 +135,28 @@ export const projects: ProjectItem[] = [
   {
     title: "MERN Stack Real Estate Platform",
     summary:
-      "Full-stack property platform with Google OAuth, listing management, image uploads, advanced search, Redux Toolkit, and Tailwind CSS.",
+      "Full-stack real estate platform with Google OAuth, protected listing management, Firebase image uploads, advanced search filters, and paginated property browsing.",
     stack: ["MongoDB", "Express.js", "React.js", "Node.js", "Redux Toolkit"],
-    codeUrl: `https://github.com${personalInfo.github}`,
     problem:
-      "The product needed a modern property platform with secure sign-in, rich listing flows, search usability, and media management across devices.",
+      "The product needed a complete property workflow where users could authenticate securely, create and manage listings, upload images, and filter homes quickly across rent and sale flows.",
     solution:
-      "Developed a MERN stack application combining Google OAuth, listing workflows, advanced search, and state management with a responsive frontend.",
+      "Built a MERN application with JWT-based auth, Google sign-in, protected routes, Firebase-backed image uploads, listing CRUD flows, and query-driven search with filters for type, offer, parking, furnishing, and sort order.",
     role: "Built full-stack application logic, search flows, authentication features, and listing management experience.",
     outcome:
-      "Delivered a complete real estate product flow with better user access, smoother listing operations, and responsive browsing.",
+      "Delivered an end-to-end real estate experience with smoother onboarding, self-serve listing operations, and faster property discovery through practical filtering and pagination.",
     highlights: [
-      "Google OAuth authentication",
-      "Image upload and listing workflows",
-      "Advanced search with Redux Toolkit",
+      "Google OAuth and JWT cookie authentication",
+      "Create, update, and delete listing workflows",
+      "Firebase image uploads with advanced search and show-more pagination",
     ],
     visualLabel: "Full-Stack Product",
-    demoNote: "Live demo available on request while the code remains the primary public artifact.",
+    demoNote: "Project includes private-route flows, listing CRUD, and Firebase image handling; demo details can be shared on request.",
   },
   {
     title: "Smart RFID Livestock Management System",
     summary:
       "IoT-based monitoring platform using ESP8266, RFID tags, MQTT protocol, and PostgreSQL for real-time health, weight, and vaccine tracking for farmers.",
     stack: ["ESP8266", "RFID", "MQTT", "PostgreSQL", "IoT"],
-    codeUrl: `https://github.com${personalInfo.github}`,
     problem:
       "Farmers needed a practical way to monitor livestock health records, weights, and vaccine status in real time without manual tracking overhead.",
     solution:

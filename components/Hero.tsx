@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { ArrowDown, Download, Github, Linkedin, Mail, Radar, ShieldCheck, Sparkles, Workflow } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Radar, ShieldCheck, Sparkles, Workflow } from "lucide-react";
 import { useEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
 import { keyStats, personalInfo } from "@/lib/data";
@@ -162,9 +162,6 @@ export function Hero() {
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <MagneticButton href="#projects">View Work</MagneticButton>
-              <MagneticButton href={personalInfo.resumeUrl} download variant="secondary">
-                Download CV
-              </MagneticButton>
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.22em] text-slate-300 transition hover:text-accentSoft"
@@ -306,14 +303,6 @@ export function Hero() {
               </div>
 
               <div className="mt-4 flex flex-wrap gap-3">
-                <a
-                  href={personalInfo.resumeUrl}
-                  download
-                  className="inline-flex items-center gap-2 rounded-full border border-cyan-300/24 bg-cyan-400/[0.08] px-4 py-3 text-sm font-semibold text-cyan-50 transition hover:border-accent/45 hover:bg-cyan-400/[0.12]"
-                >
-                  <Download className="h-4 w-4" />
-                  Resume Download
-                </a>
                 <a
                   href="#experience"
                   className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition hover:border-accent/40 hover:text-accentSoft"

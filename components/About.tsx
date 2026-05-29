@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { Code2, Download, Server, ShieldCheck, TerminalSquare } from "lucide-react";
+import { Code2, Server, ShieldCheck, TerminalSquare } from "lucide-react";
 import { aboutCopy, personalInfo } from "@/lib/data";
 
 const highlights = [
@@ -125,14 +125,6 @@ export function About() {
                   </div>
                 </div>
               </div>
-              <a
-                href={personalInfo.resumeUrl}
-                download
-                className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition hover:border-accent/45 hover:text-accentSoft"
-              >
-                <Download className="h-4 w-4" />
-                Download Resume
-              </a>
             </div>
           </div>
 

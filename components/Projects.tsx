@@ -8,39 +8,39 @@ import { projects } from "@/lib/data";
 import type { ProjectItem } from "@/types";
 
 function ProjectVisual({ project }: { project: ProjectItem }) {
-  if (project.title === "WEGOFIN") {
+  if (project.title === "WegoFin") {
     return (
       <div className="relative overflow-hidden rounded-[1.5rem] border border-cyan-300/16 bg-[linear-gradient(180deg,rgba(6,182,212,0.10),rgba(10,14,24,0.88))] p-4">
         <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.22em] text-cyan-100/80">
-          <span>Payment Flow</span>
-          <span>Live Tracking</span>
+          <span>Admin + Merchant</span>
+          <span>Payment Ops</span>
         </div>
         <div className="mt-5 grid gap-3">
           <div className="flex items-center gap-3">
             <div className="rounded-full border border-cyan-300/20 bg-cyan-400/10 px-3 py-1.5 text-xs text-cyan-100">
-              Checkout
+              Admin
             </div>
             <div className="h-px flex-1 bg-gradient-to-r from-cyan-300/40 to-transparent" />
             <div className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-xs text-white">
-              Gateway
+              Merchant
             </div>
             <div className="h-px flex-1 bg-gradient-to-r from-white/30 to-transparent" />
             <div className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-xs text-white">
-              Settlement
+              Gateway
             </div>
           </div>
           <div className="grid gap-3 sm:grid-cols-3">
             <div className="rounded-2xl border border-white/10 bg-[#0b1220]/80 p-4">
-              <p className="text-[11px] uppercase tracking-[0.2em] text-slate-500">Refunds</p>
-              <p className="mt-2 text-xl font-semibold text-white">Streamlined</p>
+              <p className="text-[11px] uppercase tracking-[0.2em] text-slate-500">Control</p>
+              <p className="mt-2 text-xl font-semibold text-white">Dashboard</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-[#0b1220]/80 p-4">
-              <p className="text-[11px] uppercase tracking-[0.2em] text-slate-500">Methods</p>
-              <p className="mt-2 text-xl font-semibold text-white">Multi Pay</p>
+              <p className="text-[11px] uppercase tracking-[0.2em] text-slate-500">Merchant</p>
+              <p className="mt-2 text-xl font-semibold text-white">Links & QR</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-[#0b1220]/80 p-4">
-              <p className="text-[11px] uppercase tracking-[0.2em] text-slate-500">Status</p>
-              <p className="mt-2 text-xl font-semibold text-white">Tracked</p>
+              <p className="text-[11px] uppercase tracking-[0.2em] text-slate-500">Ops</p>
+              <p className="mt-2 text-xl font-semibold text-white">Settle</p>
             </div>
           </div>
         </div>
@@ -115,8 +115,8 @@ function ProjectVisual({ project }: { project: ProjectItem }) {
 
 function ProjectDiagram({ project }: { project: ProjectItem }) {
   const nodes =
-    project.title === "WEGOFIN"
-      ? ["Client", "API Layer", "Gateway", "Tracking", "Settlement"]
+    project.title === "WegoFin"
+      ? ["Admin", "Merchant", "Payment APIs", "Gateway Status", "Reports/Settlement"]
       : project.title === "MERN Stack Real Estate Platform"
         ? ["OAuth", "Listings", "Uploads", "Search", "Redux"]
         : ["RFID", "ESP8266", "MQTT", "PostgreSQL", "Dashboard"];
@@ -266,17 +266,19 @@ function ProjectDrawer({
               </div>
 
               <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href={project.codeUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-                  data-hover
-                  data-cursor="Open"
-                >
-                  <Github className="h-4 w-4" />
-                  Open GitHub
-                </a>
+                {project.codeUrl ? (
+                  <a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+                    data-hover
+                    data-cursor="Open"
+                  >
+                    <Github className="h-4 w-4" />
+                    Open GitHub
+                  </a>
+                ) : null}
                 {project.demoUrl ? (
                   <a
                     href={project.demoUrl}
@@ -412,19 +414,21 @@ function ProjectCard({
                 <ArrowRight className="h-4 w-4" />
               </div>
               <div className="flex flex-wrap items-center gap-3">
-                <a
-                  href={project.codeUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={(event) => event.stopPropagation()}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white transition hover:border-accent/50 hover:text-accentSoft"
-                  data-hover
-                  data-cursor="Open"
-                >
-                  <Github className="h-4 w-4" />
-                  GitHub
-                  <ArrowUpRight className="h-4 w-4" />
-                </a>
+                {project.codeUrl ? (
+                  <a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(event) => event.stopPropagation()}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white transition hover:border-accent/50 hover:text-accentSoft"
+                    data-hover
+                    data-cursor="Open"
+                  >
+                    <Github className="h-4 w-4" />
+                    GitHub
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                ) : null}
                 {project.demoUrl ? (
                   <a
                     href={project.demoUrl}
