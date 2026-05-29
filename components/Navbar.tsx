@@ -3,7 +3,6 @@
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { navItems, personalInfo } from "@/lib/data";
 import { normalizeLandingToHero, scrollToSection } from "@/lib/scroll";
 
@@ -107,7 +106,6 @@ export function Navbar() {
 
           <div className="flex items-center gap-3">
             <div className="hidden items-center gap-3 md:flex">
-              <ThemeToggle />
               <a
                 href={personalInfo.resumeUrl}
                 download
@@ -140,7 +138,6 @@ export function Navbar() {
             transition={{ duration: 0.25 }}
           >
             <div className="mb-3 flex items-center justify-end gap-3 px-2">
-              <ThemeToggle />
               <a
                 href={personalInfo.resumeUrl}
                 download
