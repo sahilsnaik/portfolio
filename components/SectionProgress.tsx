@@ -55,11 +55,11 @@ export function SectionProgress() {
   }, []);
 
   return (
-    <div className="fixed right-5 top-1/2 z-40 hidden -translate-y-1/2 xl:block">
-      <div className="relative rounded-[1.75rem] border border-white/10 bg-slate-950/55 px-3 py-4 shadow-[0_18px_45px_rgba(0,0,0,0.22)] backdrop-blur-xl">
-        <div className="absolute left-5 top-4 h-[calc(100%-2rem)] w-px bg-white/8" />
+    <div className="fixed right-2 top-1/2 z-40 hidden -translate-y-1/2 min-[1800px]:block">
+      <div className="relative w-36 rounded-[1.75rem] border border-white/10 bg-slate-950/55 px-3 py-4 shadow-[0_18px_45px_rgba(0,0,0,0.22)] backdrop-blur-xl">
+        <div className="absolute right-5 top-4 h-[calc(100%-2rem)] w-px bg-white/8" />
         <motion.div
-          className="absolute left-5 top-4 origin-top bg-gradient-to-b from-accent via-accentSoft to-transparent"
+          className="absolute right-5 top-4 origin-top bg-gradient-to-b from-accent via-accentSoft to-transparent"
           style={{ scaleY: reduceMotion ? 1 : scaleY, height: "calc(100% - 2rem)", width: "1px" }}
         />
         <div className="relative flex flex-col gap-2">
@@ -71,18 +71,17 @@ export function SectionProgress() {
                 key={item.id}
                 type="button"
                 onClick={() => scrollToSection(item.id)}
-                className={`group flex items-center justify-end gap-3 rounded-full py-1.5 pl-2 pr-1 transition ${
+                className={`group flex h-7 w-full items-center justify-between gap-2 rounded-full transition ${
                   isActive ? "text-accentSoft" : "text-slate-500 hover:text-slate-200"
                 }`}
-                data-hover
-                data-cursor="Go"
                 aria-label={`Jump to ${item.label}`}
+                aria-current={isActive ? "location" : undefined}
               >
                 <span
-                  className={`overflow-hidden whitespace-nowrap text-xs uppercase tracking-[0.24em] transition-all duration-300 ${
+                  className={`pointer-events-none w-24 truncate text-xs uppercase tracking-[0.2em] transition-opacity duration-300 ${
                     isActive
-                      ? "max-w-[8rem] opacity-100"
-                      : "max-w-0 opacity-0 group-hover:max-w-[8rem] group-hover:opacity-100"
+                      ? "opacity-100"
+                      : "opacity-0 group-hover:opacity-100"
                   }`}
                 >
                   {item.label}

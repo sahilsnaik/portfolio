@@ -12,7 +12,7 @@ export type SocialLink = {
 export type SkillCategory = {
   title: string;
   items: string[];
-  primaryItems?: string[];
+  coreItems?: string[];
 };
 
 export type ExperienceItem = {

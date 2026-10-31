@@ -13,9 +13,6 @@ const ParticleBackground = dynamic(() => import("@/components/ParticleBackground
 });
 
 const TYPE_SPEED = 70;
-const heroIntro =
-  "Backend developer focused on scalable APIs, payment workflows, and reliable systems that are built to ship and hold up in production.";
-
 const statVisuals = [
   { icon: Radar, accent: "from-cyan-300/40 via-cyan-300/18 to-transparent" },
   { icon: Sparkles, accent: "from-sky-300/40 via-sky-300/16 to-transparent" },
@@ -126,40 +123,40 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 grid-overlay opacity-60" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(6,182,212,0.14),transparent_28%)]" />
       <motion.div
-        className="absolute inset-0 opacity-55 lg:opacity-100"
+        className="absolute inset-0 opacity-55 lg:inset-y-0 lg:left-[12%] lg:right-[-12%] lg:opacity-100"
         style={canAnimate ? { opacity: backgroundOpacity } : undefined}
       >
         <ParticleBackground />
       </motion.div>
-      <div className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(circle_at_28%_42%,rgba(4,7,13,0.14),rgba(4,7,13,0.54)_34%,rgba(4,7,13,0.84)_58%,rgba(4,7,13,0.94)_82%)]" />
+      <div className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(ellipse_at_28%_42%,rgba(4,7,13,0.42),rgba(4,7,13,0.72)_38%,rgba(4,7,13,0.9)_62%,rgba(4,7,13,0.96)_84%)] lg:bg-[radial-gradient(ellipse_at_30%_45%,rgba(4,7,13,0.62),rgba(4,7,13,0.82)_36%,rgba(4,7,13,0.9)_56%,rgba(4,7,13,0.95)_76%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-44 bg-gradient-to-t from-background via-background/92 to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-24 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.12),transparent_68%)] blur-2xl" />
       <div className="pointer-events-none absolute inset-x-0 bottom-20 z-[1] h-32 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.16),transparent_72%)] blur-2xl lg:hidden" />
 
       <div className="section-shell flex min-h-[92vh] items-center pb-20 pt-28 lg:min-h-screen lg:pb-28">
-        <div className="relative z-10 grid w-full gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(380px,0.82fr)] lg:items-center lg:gap-24 xl:gap-28 2xl:grid-cols-[minmax(0,1fr)_minmax(460px,0.86fr)] 2xl:gap-36">
+        <div className="relative z-10 grid w-full grid-cols-1 gap-12 xl:grid-cols-[minmax(0,1.02fr)_minmax(380px,0.82fr)] xl:items-center xl:gap-24 2xl:grid-cols-[minmax(0,1fr)_minmax(460px,0.86fr)] 2xl:gap-36">
           <motion.div
             initial={canAnimate ? { opacity: 0, y: 24 } : false}
             animate={canAnimate ? { opacity: 1, y: 0 } : undefined}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             style={canAnimate ? { y: contentY, opacity: contentOpacity, scale: contentScale } : undefined}
-            className="max-w-3xl"
+            className="w-full min-w-0 max-w-3xl"
           >
             {/* <p className="section-kicker">Software Developer Portfolio</p> */}
-            <div className="mt-6 max-w-[44rem]">
-              <h1 className="font-display text-5xl leading-[0.92] tracking-[-0.08em] text-white sm:text-7xl lg:text-[5.9rem]">
+            <div className="mt-6 w-full min-w-0 max-w-[44rem]">
+              <h1 className="w-full min-w-0 font-display text-5xl leading-[0.92] tracking-[-0.08em] text-white sm:text-7xl lg:text-[5.9rem]">
                 <span className="block">{typedName}</span>
               </h1>
-              <p className="mt-5 max-w-2xl font-display text-3xl leading-[1.02] tracking-[-0.05em] text-gradient sm:text-4xl lg:text-[3.35rem]">
+              <p className="mt-5 w-full min-w-0 max-w-full whitespace-normal break-words font-display text-3xl leading-[1.12] tracking-[-0.035em] text-gradient sm:text-4xl lg:text-[2.65rem] xl:text-[2.55rem] 2xl:text-[3rem]">
                 {typedRole}
               </p>
             </div>
-            <p className="mt-7 max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
-              {heroIntro}
+            <p className="mt-7 w-full min-w-0 max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
+              {personalInfo.intro}
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <MagneticButton href="#projects">View Work</MagneticButton>
+            <div className="mt-10 flex w-full min-w-0 flex-wrap items-center gap-4">
+              <MagneticButton href="#projects">View Projects</MagneticButton>
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.22em] text-slate-300 transition hover:text-accentSoft"
@@ -175,7 +172,7 @@ export function Hero() {
               </a>
             </div>
 
-            <div className="mt-9 flex flex-wrap items-center gap-3 text-sm text-slate-400">
+            <div className="mt-9 flex w-full min-w-0 flex-wrap items-center gap-3 text-sm text-slate-400">
               <a
                 href={`https://github.com${personalInfo.github}`}
                 target="_blank"
@@ -209,7 +206,7 @@ export function Hero() {
               </a>
             </div>
 
-            <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:max-w-4xl xl:grid-cols-4">
+            <div className="mt-10 grid w-full min-w-0 gap-3 sm:grid-cols-2 xl:max-w-4xl xl:grid-cols-4">
               {keyStats.map((stat, index) => {
                 const visual = statVisuals[index % statVisuals.length];
                 const Icon = visual.icon;
@@ -220,12 +217,12 @@ export function Hero() {
                   initial={canAnimate ? { opacity: 0, y: 18 } : false}
                   animate={canAnimate ? { opacity: 1, y: 0 } : undefined}
                   transition={{ delay: 0.24 + index * 0.05, duration: 0.45 }}
-                  className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-4 py-4"
+                  className="group relative min-w-0 overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-4 py-4"
                 >
                   <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r ${visual.accent}`} />
                   <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-accent/0 via-accent/25 to-transparent" />
                   <div className="relative flex items-start justify-between gap-3 pl-3">
-                    <p className="max-w-[8.5rem] text-[11px] uppercase tracking-[0.2em] text-slate-500">
+                    <p className="whitespace-nowrap text-[10px] uppercase tracking-[0.14em] text-slate-300">
                       {stat.label}
                     </p>
                     <div className="mt-0.5 rounded-full bg-white/[0.04] p-1.5 text-accentSoft/70 transition duration-300 group-hover:text-accentSoft">
@@ -246,7 +243,7 @@ export function Hero() {
             animate={canAnimate ? { opacity: 1, x: 0 } : undefined}
             transition={{ duration: 0.8, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             style={canAnimate ? { y: contentY } : undefined}
-            className="relative lg:mt-20 2xl:pl-6"
+            className="relative xl:mt-20 2xl:pl-6"
           >
             <div
               className="group"
@@ -303,10 +300,10 @@ export function Hero() {
                 </div>
               </div>
 
-              <div className="mt-4 flex flex-wrap gap-3">
+              <div className="mt-6">
                 <a
                   href="#experience"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition hover:border-accent/40 hover:text-accentSoft"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition hover:text-white"
                   onClick={(event) => {
                     event.preventDefault();
                     scrollToSection("experience");
@@ -314,14 +311,6 @@ export function Hero() {
                 >
                   See Experience
                 </a>
-              </div>
-
-              <div className="mt-4 rounded-3xl border border-cyan-300/24 bg-[linear-gradient(180deg,rgba(6,182,212,0.18),rgba(6,182,212,0.08))] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
-                <p className="text-sm font-medium text-cyan-50/90">Current Outcome</p>
-                <p className="mt-3 text-lg font-semibold leading-8 text-white">
-                  Building scalable backend systems that are designed to ship cleanly and
-                  hold up in production.
-                </p>
               </div>
 
               <a

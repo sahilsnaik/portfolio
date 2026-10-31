@@ -32,11 +32,11 @@ export function Experience() {
         >
           <div>
             <p className="section-kicker">Experience</p>
-            <h2 className="section-title">Professional timeline.</h2>
+            <h2 className="section-title">Professional Experience</h2>
           </div>
           <p className="max-w-xl section-copy lg:justify-self-end">
-            Current work focused on dependable backend engineering, scalable APIs, and
-            production-minded implementation.
+            My professional experience includes backend development, API integrations, database
+            management, and implementing application features to support business requirements.
           </p>
         </motion.div>
 
@@ -82,7 +82,7 @@ export function Experience() {
                     ) : null}
                   </div>
 
-                  <div className="mt-8 grid gap-4 lg:grid-cols-3">
+                  <div className="mt-8 grid gap-4 lg:grid-cols-2">
                     {item.highlights.map((highlight, highlightIndex) => (
                       <div
                         key={highlight}

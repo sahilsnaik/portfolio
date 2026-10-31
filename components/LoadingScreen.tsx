@@ -14,7 +14,7 @@ export function LoadingScreen() {
   ];
 
   useEffect(() => {
-    const timeout = window.setTimeout(() => setVisible(false), reduceMotion ? 250 : 1800);
+    const timeout = window.setTimeout(() => setVisible(false), reduceMotion ? 200 : 2400);
     return () => window.clearTimeout(timeout);
   }, [reduceMotion]);
 
@@ -25,7 +25,7 @@ export function LoadingScreen() {
           className="fixed inset-0 z-[80] flex items-center justify-center bg-[#03060d]"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: reduceMotion ? 1 : 1.04 }}
-          transition={{ duration: reduceMotion ? 0.2 : 0.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: reduceMotion ? 0.15 : 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="relative w-full max-w-xl px-6">
             <motion.div

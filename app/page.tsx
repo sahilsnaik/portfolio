@@ -1,7 +1,6 @@
 import { About } from "@/components/About";
 import { BackToTop } from "@/components/BackToTop";
 import { Contact } from "@/components/Contact";
-import { CustomCursor } from "@/components/CustomCursor";
 import { Education } from "@/components/Education";
 import { Experience } from "@/components/Experience";
 import { Footer } from "@/components/Footer";
@@ -16,7 +15,6 @@ export default function HomePage() {
   return (
     <>
       <LoadingScreen />
-      <CustomCursor />
       <BackToTop />
       <SectionProgress />
       <Navbar />

@@ -61,8 +61,8 @@ export function About() {
           <div className="grid gap-6">
             <div>
               <p className="section-kicker">About</p>
-              <h2 className="section-title max-w-lg">
-                Engineering products that feel steady under pressure.
+              <h2 className="section-title max-w-xl text-4xl leading-[1.08] sm:text-5xl lg:text-[3.5rem]">
+                About Me
               </h2>
             </div>
 
@@ -131,12 +131,7 @@ export function About() {
           <div className="glass-panel rounded-[2rem] p-6 sm:p-8">
             <p className="text-[1.35rem] leading-10 text-slate-200">{aboutCopy[0]}</p>
             <p className="mt-5 section-copy">{aboutCopy[1]}</p>
-            <p className="mt-5 section-copy">{aboutCopy[2]}</p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-5">
-                <p className="text-base uppercase tracking-[0.22em] text-slate-500">Profile</p>
-                <p className="mt-3 text-xl text-white">{personalInfo.role}</p>
-              </div>
+            <div className="mt-6">
               <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-5">
                 <p className="text-base uppercase tracking-[0.22em] text-slate-500">Best Fit</p>
                 <p className="mt-3 text-xl text-white">Backend, API, and product engineering teams</p>

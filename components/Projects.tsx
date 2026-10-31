@@ -75,6 +75,35 @@ function ProjectVisual({ project }: { project: ProjectItem }) {
     );
   }
 
+  if (project.title === "AI-Powered Marketing Content & Campaign Assistant") {
+    return (
+      <div className="relative overflow-hidden rounded-[1.5rem] border border-cyan-300/16 bg-[linear-gradient(180deg,rgba(6,182,212,0.09),rgba(10,14,24,0.9))] p-4">
+        <div className="rounded-[1.2rem] border border-white/10 bg-[#0a0f18] p-4">
+          <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.22em] text-slate-500">
+            <span>Campaign Brief</span>
+            <span>Product + Audience</span>
+          </div>
+          <div className="mt-4 rounded-2xl border border-cyan-300/16 bg-cyan-400/[0.07] p-3">
+            <div className="h-2.5 w-2/3 rounded-full bg-cyan-100/45" />
+            <div className="mt-2 h-2.5 w-1/2 rounded-full bg-white/20" />
+          </div>
+          <div className="my-4 flex items-center gap-3">
+            <div className="h-px flex-1 bg-gradient-to-r from-cyan-300/35 to-transparent" />
+            <span className="rounded-full border border-cyan-300/20 bg-cyan-400/10 px-3 py-1.5 text-xs text-cyan-100">Gemini API</span>
+            <div className="h-px flex-1 bg-gradient-to-l from-cyan-300/35 to-transparent" />
+          </div>
+          <div className="grid grid-cols-2 gap-2">
+            {["Ad Copy", "Captions", "CTAs", "Keywords"].map((item) => (
+              <div key={item} className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-3 text-center text-xs text-white">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative overflow-hidden rounded-[1.5rem] border border-cyan-300/14 bg-[linear-gradient(180deg,rgba(9,18,32,0.94),rgba(6,10,20,0.9))] p-4">
       <div className="grid gap-4 sm:grid-cols-[0.75fr_1.25fr]">
@@ -119,7 +148,9 @@ function ProjectDiagram({ project }: { project: ProjectItem }) {
       ? ["Admin", "Merchant", "Payment APIs", "Gateway Status", "Reports/Settlement"]
       : project.title === "MERN Stack Real Estate Platform"
         ? ["OAuth", "Listings", "Uploads", "Search", "Redux"]
-        : ["RFID", "ESP8266", "MQTT", "PostgreSQL", "Dashboard"];
+        : project.title === "AI-Powered Marketing Content & Campaign Assistant"
+          ? ["Brief", "React UI", "Express API", "Gemini API", "MySQL"]
+          : ["RFID", "ESP8266", "MQTT", "PostgreSQL", "Dashboard"];
 
   return (
     <div className="rounded-[1.5rem] border border-white/10 bg-[#08111d]/88 p-5">
@@ -475,15 +506,15 @@ export function Projects() {
         >
           <div className="max-w-2xl">
             <p className="section-kicker">Projects</p>
-            <h2 className="section-title">Selected builds across payments, platforms, and IoT.</h2>
+            <h2 className="section-title">Featured Projects</h2>
           </div>
           <p className="max-w-xl text-[1.2rem] leading-10 text-slate-300 lg:justify-self-end">
-            A focused set of projects showing backend depth, system integration work, and
-            full-stack delivery when the product needs it.
+            Selected projects showcasing my work in web application development, backend
+            systems, and AI-powered applications.
           </p>
         </motion.div>
 
-        <div className="mt-6 grid gap-5 rounded-[2rem] border border-white/8 bg-white/[0.015] p-4 sm:p-5 xl:grid-cols-[1.2fr_1fr_1fr]">
+        <div className="mt-6 grid gap-5 rounded-[2rem] border border-white/8 bg-white/[0.015] p-4 sm:p-5 xl:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.title}

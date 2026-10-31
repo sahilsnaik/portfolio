@@ -37,10 +37,11 @@ export function Contact() {
           <div className="relative grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
               <p className="section-kicker text-base tracking-[0.28em]">Contact</p>
-              <h2 className="section-title max-w-xl">Let&apos;s build backend systems that stay reliable as they scale.</h2>
+              <h2 className="section-title max-w-xl">Get in Touch</h2>
               <p className="mt-6 max-w-xl text-[1.2rem] leading-10 text-slate-300">
-                If you&apos;re hiring for backend or full-stack development, I&apos;d be glad to
-                connect and talk through the product, the team, and the engineering problems ahead.
+                I&apos;m interested in opportunities where I can contribute my software development
+                skills, solve technical challenges, and build reliable applications. Feel free to
+                connect with me to discuss relevant opportunities.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <MagneticButton href={`mailto:${personalInfo.email}`}>Email Me</MagneticButton>
@@ -98,16 +99,6 @@ export function Contact() {
         </motion.div>
       </div>
 
-      <div className="fixed inset-x-4 bottom-4 z-40 lg:hidden">
-        <a
-          href={`mailto:${personalInfo.email}`}
-          className="block rounded-full bg-accent px-5 py-4 text-center text-sm font-semibold text-slate-950 shadow-[0_18px_45px_rgba(6,182,212,0.24)]"
-          data-hover
-          data-cursor="Mail"
-        >
-          Get In Touch
-        </a>
-      </div>
     </section>
   );
 }

@@ -25,20 +25,20 @@ export function Skills() {
         >
           <div>
             <p className="section-kicker">Skills</p>
-            <h2 className="section-title">A backend-first stack with full-stack flexibility.</h2>
+            <h2 className="section-title">Technical Skills</h2>
           </div>
           <p className="max-w-xl section-copy lg:justify-self-end">
-            Languages, frameworks, and tools I use to move from architecture decisions to
-            shipped features with confidence.
+            Technologies and tools I use to develop, maintain, and improve web applications
+            across the frontend, backend, and database layers.
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-2 2xl:grid-cols-4">
+        <div className="mt-12 grid grid-cols-[repeat(auto-fit,minmax(min(100%,15rem),1fr))] gap-5">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              className={`glass-panel relative overflow-hidden rounded-[2rem] p-6 sm:p-8 ${
-                category.primaryItems?.length ? "border-accent/15" : ""
+              className={`glass-panel relative overflow-hidden rounded-[2rem] p-6 ${
+                category.coreItems?.length ? "border-accent/15" : ""
               }`}
               initial={reduceMotion ? false : { opacity: 0, y: 24 }}
               whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
@@ -46,20 +46,15 @@ export function Skills() {
               transition={{ duration: 0.6, delay: categoryIndex * 0.08 }}
             >
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-              <div className="flex items-center justify-between gap-3">
+              <div>
                 <p className="section-kicker">{category.title}</p>
-                {category.primaryItems?.length ? (
-                  <span className="rounded-full border border-accent/20 bg-accent/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-accentSoft">
-                    Primary
-                  </span>
-                ) : null}
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
                 {category.items.map((skill, skillIndex) => (
                   <motion.span
                     key={skill}
                     className={`rounded-full border px-4 py-3 text-base transition ${
-                      category.primaryItems?.includes(skill)
+                      category.coreItems?.includes(skill)
                         ? "border-accent/25 bg-accent/[0.1] font-semibold text-white shadow-[0_0_0_1px_rgba(103,232,249,0.06)]"
                         : "border-white/10 bg-white/[0.05] text-slate-200 hover:border-accent/35 hover:bg-accent/[0.08]"
                     }`}
@@ -69,7 +64,7 @@ export function Skills() {
                     transition={{ duration: 0.4, delay: categoryIndex * 0.08 + skillIndex * 0.04 }}
                   >
                     {skill}
-                    {category.primaryItems?.includes(skill) ? (
+                    {category.coreItems?.includes(skill) ? (
                       <span className="ml-2 text-xs uppercase tracking-[0.18em] text-accentSoft/85">
                         Core
                       </span>
